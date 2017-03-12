@@ -72,6 +72,16 @@
           {{ message }}
       </div>
 
+      <!-- use the concept of automatically create the model means change in view update the model automatically -->
+      <div ng-controller ="two-wayBinding">
+
+          <input type="text" ng-model="greetings">
+          <br/><br/>
+          {{  greetings  }}
+
+      </div>
+
+
     </div>
 
   </body>
