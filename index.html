@@ -63,6 +63,15 @@
           <img ng-src="{{ country.flag }}" style="height:100px;width:100px;">
       </div>
 
+      <!-- use  two way data binding -->
+      <div ng-controller="two-wayBinding">
+
+          <!-- here we use the ng-model directive which means change in view  update the model-->
+          <input type="text" ng-model ="message" />
+          <br /><br />
+          {{ message }}
+      </div>
+
     </div>
 
   </body>

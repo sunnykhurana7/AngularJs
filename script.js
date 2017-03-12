@@ -51,3 +51,11 @@ myApp.controller("imagecontroller",function($scope){
   $scope.country = country;
 
 });
+
+
+
+//controller for two-way data binding
+myApp.controller("two-wayBinding",function($scope){
+
+  $scope.message = "Hello AngularJS!"
+})
