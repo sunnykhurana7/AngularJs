@@ -21,7 +21,7 @@ myApp.controller("mySecondController",function($scope){
     $scope.employee = employee;
 })
 
-// 
+//
 // // use the method chaining to create the module and create the controller n bind the controller with module in one line
 // var myApp = angular
 //             .module("myModule",[])
@@ -36,3 +36,18 @@ myApp.controller("mySecondController",function($scope){
 //
 //                 $scope.employee = employee;
 //             });
+
+
+// made another controller with images
+
+myApp.controller("imagecontroller",function($scope){
+
+  var country = {
+    name : "USA",
+    capital: "Washington",
+    flag: "Flag_of_the_United_States.svg.png"
+  };
+
+  $scope.country = country;
+
+});

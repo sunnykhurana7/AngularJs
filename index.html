@@ -40,5 +40,30 @@
             Gender : - {{ employee.gender }}
         </div>
     </div>
+
+    <!-- use the another controller -->
+    <div ng-controller="imagecontroller">
+      <!-- <img src="Flag_of_the_United_States.svg.png" style="width:100px;height:100px"> -->
+
+      <!--  use the properties-->
+      <div>
+          Name => {{ country.name }}
+      </div>
+
+      <div>
+          Country Name => {{ country.capital  }}
+      </div>
+
+      <div>
+        <!-- <img src="{{  country.flag  }}" style="height:100px;width:100px"> -->
+      </div>
+
+      <!--  use the image with ng-src -->
+      <div>
+          <img ng-src="{{ country.flag }}" style="height:100px;width:100px;">
+      </div>
+
+    </div>
+
   </body>
 </html>
