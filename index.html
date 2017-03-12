@@ -31,5 +31,14 @@
         <!-- here we use the controller -->
         {{ message }}
     </div>
+
+    <!--  here we use second controller -->
+    <div ng-controller="mySecondController">
+        <div>
+            First Name : - {{ employee.firstname }} <br />
+            Last Name : - {{ employee.lastname }} <br />
+            Gender : - {{ employee.gender }}
+        </div>
+    </div>
   </body>
 </html>
