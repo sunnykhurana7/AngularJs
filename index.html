@@ -1,11 +1,13 @@
-<html>
+<html ng-app="myModule">
   <head>
     <title>Angular JS | Welcome </title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <!-- INCLUDE JS  -->
+    <script src="script.js"></script>
   </head>
 
   <!--  to starting work with angular use ng-app -->
-  <body ng-app>
+  <body>
     <div>
         <!--  here {{}} is called binding expression to write any angular code -->
         10 + 20 =>  {{ 10 + 20  }}
@@ -25,6 +27,9 @@
         {{ ['sahil','khurana','sunny','khurana'][2]}}
     </div>
 
-
+    <div ng-controller="myController">
+        <!-- here we use the controller -->
+        {{ message }}
+    </div>
   </body>
 </html>
