@@ -160,6 +160,20 @@
       </table>
     </div>
 
+    <!-- use the nested ng-repeat -->
+    <div ng-controller="nesting-repeat">
+        <ul>
+            <li ng-repeat="country in countries">
+              {{ country.name }}
+                <ul>
+                  <li ng-repeat="city in country.cities">
+                    {{ city.name }}
+                  <li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
 
     </div>
 

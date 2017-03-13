@@ -89,3 +89,40 @@ myApp.controller("NGRepeat",function($scope){
    $scope.employees = employees;
 
 });
+
+
+//  use the nested ng-repeat
+
+myApp.controller("nesting-repeat",function($scope){
+
+  var countries = [
+
+    {
+      name : "UK",
+      cities : [
+            { name : "london" },
+            { name : "Manchester" },
+            { name : "Birmingham" } ,
+      ]
+    },
+    {
+      name : "USA",
+      cities : [
+            { name : "los Angeles" },
+            { name : "Chicago" },
+            { name : "Houston" } ,
+      ]
+    },
+    {
+      name : "India",
+      cities : [
+            { name : "Hyderabad" },
+            { name : "Chennai" },
+            { name : "Delhi" } ,
+      ]
+    }
+  ];
+
+  $scope.countries = countries;
+
+});
