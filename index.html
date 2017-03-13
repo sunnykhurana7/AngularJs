@@ -294,6 +294,34 @@
       </table>
     </div>
 
+
+    <!-- search filter in angular js -->
+    <div ng-controller="SearchController">
+      <table>
+          Search :- <input type="text" placeholder="SearchEmployees" style="margin-top:20px;" ng-model ="searchtext" >
+          <br /><br />
+          <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Date Of Birth</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Salary</th>
+              </tr>
+          </thead>
+
+          <tbody>
+              <tr ng-repeat="worker in workers | orderBy: sortcolumn | filter:searchtext">
+                  <td>{{ worker.firstname | uppercase }}</td>
+                  <td>{{ worker.dateOfBirth | date:"dd/mm/yyyy" }}</td>
+                  <td>{{ worker.lastname | uppercase}}</td>
+                  <td>{{ worker.gender | uppercase }}</td>
+                  <td>{{ worker.salary | currency }}</td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+
     </div>
 
   </body>
