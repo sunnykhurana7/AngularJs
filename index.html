@@ -234,6 +234,11 @@
     <!-- use the filteration here -->
     <div ng-controller="filteruse">
       <table>
+
+        <!--  use pagination here -->
+        Rows to display : <input type="number" step="1" min="0" max="5" style="margin-top:10px;" ng-model="rowlimit">
+        <br /><br />
+
           <thead>
               <tr>
                 <th>First Name</th>
@@ -245,7 +250,7 @@
           </thead>
 
           <tbody>
-              <tr ng-repeat="worker in workers">
+              <tr ng-repeat="worker in workers | limitTo:rowlimit">
                   <td>{{ worker.firstname | uppercase }}</td>
                   <td>{{ worker.dateOfBirth | date:"dd/mm/yyyy" }}</td>
                   <td>{{ worker.lastname | uppercase}}</td>

@@ -165,5 +165,6 @@ myApp.controller("filteruse",function($scope){
   ];
 
   $scope.workers = workers;
+  $scope.rowlimit = 3;
 
 });
