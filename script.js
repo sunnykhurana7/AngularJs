@@ -168,3 +168,22 @@ myApp.controller("filteruse",function($scope){
   $scope.rowlimit = 3;
 
 });
+
+
+// use the controller for sorting purpose
+myApp.controller("Sorting",function($scope){
+
+
+  var workers = [
+
+    { firstname:"Ben",dateOfBirth:new Date("November 23, 1980"),lastname:"hastings",gender:"male",salary:55000 },
+    { firstname:"Sara",dateOfBirth:new Date("November 23, 1980"),lastname:"paul",gender:"female",salary:60000 },
+    { firstname:"Mark",dateOfBirth:new Date("November 23, 1980"),lastname:"holland",gender:"male",salary:45000 },
+    { firstname:"pam",dateOfBirth:new Date("November 23, 1980"),lastname:"macintosh",gender:"female",salary:75000 },
+    { firstname:"Todd",dateOfBirth:new Date("November 23, 1980"),lastname:"barber",gender:"male",salary:89000 }
+
+  ];
+
+  $scope.workers = workers;
+  $scope.sortcolumn = "firstname";
+});
