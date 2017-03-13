@@ -80,6 +80,85 @@
           {{  greetings  }}
 
       </div>
+    <div ng-controller="TableController">
+      <h3>Use Two-Way Data Binding</h3>
+      <table>
+          <tr>
+            <td>First Name</td>
+            <td>
+              <input type="text" ng-model = "Collegename.name">
+            </td>
+          </tr>
+
+          <tr>
+            <td>College Place </td>
+            <td>
+              <input type="text" ng-model = "Collegename.place">
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>College Course</td>
+            <td>
+              <input type="text" ng-model = "Collegename.course">
+            </td>
+          </tr>
+      </table>
+      <br />
+      <br />
+      <br />
+
+      <table>
+          <tr>
+            <td>First Name</td>
+            <td>
+                {{  Collegename.name }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>College Place </td>
+            <td>
+              {{  Collegename.place }}
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>College Course</td>
+            <td>
+                {{  Collegename.course }}
+            </td>
+          </tr>
+      </table>
+    </div>
+
+    <!--  use the concept of ng-repeat - it works similar like foreach loop in c# -->
+
+    <div ng-controller="NGRepeat">
+      <table>
+          <thead>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Gender</th>
+                <th>Salary</th>
+              </tr>
+          </thead>
+
+          <tbody>
+              <!--  here ng-repeat use as a foreach loop in another languages-->
+              <tr ng-repeat="employee in employees">
+                  <td>{{ employee.firstname }}</td>
+                  <td>{{ employee.lastname }}</td>
+                  <td>{{ employee.gender }}</td>
+                  <td>{{ employee.salary }}</td>
+              </tr>
+          </tbody>
+
+      </table>
+    </div>
 
 
     </div>
