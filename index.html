@@ -4,6 +4,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
     <!-- INCLUDE JS  -->
     <script src="script.js"></script>
+    <!--  include css -->
+    <link href="index.css" type="text/css" rel="stylesheet" />
   </head>
 
   <!--  to starting work with angular use ng-app -->
@@ -187,6 +189,48 @@
             </li>
         </ul>
     </div>
+
+    <!-- second way indexing  -->
+    <div ng-controller="nesting-repeat">
+        <ul>
+            <li ng-repeat="country in countries"  ng-init="parentIndex=$index">
+              {{ country.name }} - index {{ $index  }}
+                <ul>
+                  <li ng-repeat="city in country.cities">
+                    {{ city.name }} -parentindex = {{   parentIndex }},- index {{ $index  }}
+                  </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- event handling in angular js -->
+    <div ng-controller = "handlingevents">
+      <table>
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Likes</th>
+              <th>Dislikes</th>
+              <th>Like/Dislike</th>
+          </tr>
+         </thead>
+
+         <tbody>
+            <tr ng-repeat="technology in technologies">
+              <td>{{ technology.name }}</td>
+              <td>{{ technology.likes }}</td>
+              <td>{{ technology.dislikes }}</td>
+              <td>
+                <input type="button" value="Like" ng-click ="incrementLikes(technology)">
+                <input type="button" value="Dislikes" ng-click ="incrementdisLikes(technology)">
+              </td>
+            </tr>
+         </tbody>
+      </table>
+    </div>
+
+
 
     </div>
 

@@ -126,3 +126,25 @@ myApp.controller("nesting-repeat",function($scope){
   $scope.countries = countries;
 
 });
+
+
+myApp.controller("handlingevents",function($scope){
+
+  var technologies = [
+
+    { name:"C#",likes:0,dislikes:0 },
+    { name:"Asp.net",likes:0,dislikes:0 },
+    { name:"Sql Server",likes:0,dislikes:0 },
+    { name:"AngularJS",likes:0,dislikes:0 },
+  ];
+
+  $scope.technologies = technologies;
+
+  $scope.incrementLikes = function(technology){
+    technology.likes++;
+  }
+
+  $scope.incrementdisLikes = function(technology){
+    technology.dislikes++;
+  }
+});
